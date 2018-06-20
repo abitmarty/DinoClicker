@@ -73,6 +73,18 @@ public class MainActivity extends AppCompatActivity {
 
         //Title
         getSupportActionBar().setTitle("DinoClicks");
+        try{
+            if(readFile(fileName).length() > 0){
+                Toast.makeText(MainActivity.this, "Score bestaat al" + String.valueOf(readFile(fileName)), Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Score aanmaken", Toast.LENGTH_SHORT).show();
+                saveFile(fileName, "0.0");
+                scoreDino = 0;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
 
 //        Als je op bottom navigatie drukt

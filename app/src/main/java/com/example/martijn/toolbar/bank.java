@@ -69,7 +69,7 @@ public class bank extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Account");
 
-        //Top scores er in zettennnn
+        //Top scores er in zettenn
         fillListToppers();
 
 
@@ -276,7 +276,7 @@ public class bank extends AppCompatActivity {
                 for(DataSnapshot ds: dataSnapshot.getChildren()){
                     user = ds.getValue(User.class);
                     userList.add(user);
-                    list.add(String.valueOf(user.getScore()) + " " + String.valueOf(user.getName()));
+                    list.add(String.valueOf(String.valueOf(user.getScore())) + " " + String.valueOf(user.getName()));
                     teller = teller + 1;
                 }
                 deListView.setAdapter(adapter);
