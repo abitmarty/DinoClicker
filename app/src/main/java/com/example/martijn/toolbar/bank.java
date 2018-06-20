@@ -69,7 +69,7 @@ public class bank extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Account");
 
-        //Top scores er in zettenn
+        //Top scores er in zettennn
         fillListToppers();
 
 
