@@ -37,6 +37,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -211,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(MainActivity.this, "Score saved", Toast.LENGTH_LONG).show();
         }catch(Exception e){
             e.printStackTrace();
-            Toast.makeText(MainActivity.this, "Error saving score!", Toast.LENGTH_LONG).show();
+//            Toast.makeText(MainActivity.this, "Error saving score!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -228,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
             scoreDinoLok = new String(buffer);
         }catch(Exception e){
             e.printStackTrace();
-            Toast.makeText(MainActivity.this, "Error reading file", Toast.LENGTH_LONG).show();
+//            Toast.makeText(MainActivity.this, "Error reading file", Toast.LENGTH_LONG).show();
         }
 //        Toast.makeText(MainActivity.this, scoreDinoLok, Toast.LENGTH_LONG).show();
         return scoreDinoLok;

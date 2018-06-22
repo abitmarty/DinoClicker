@@ -114,17 +114,17 @@ public class bank extends AppCompatActivity {
 //                startActivity(Intent.createChooser(sharingIntent, "Share using"));
 //            }
 //        });
-//        sharebt = (Button) findViewById(R.id.imageButton38);
-//        sharebt.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v){
-//                Toast.makeText(bank.this, "Clean file", Toast.LENGTH_SHORT).show();
-//                saveFile("score.txt", null);//Hij maakt de score niet 0??
-//                giveUserName();
-//                saveFile("dinoFotoFile.txt", null);
-//
-//            }
-//        });
+        sharebt = (Button) findViewById(R.id.imageButton38);
+        sharebt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(bank.this, "Clean file", Toast.LENGTH_SHORT).show();
+                saveFile("score.txt", null);//Hij maakt de score niet 0??
+                giveUserName();
+                saveFile("dinoFotoFile.txt", null);
+
+            }
+        });
 
         savetoFirebaseButton = (Button) findViewById(R.id.imageButton34);
         savetoFirebaseButton.setOnClickListener(new View.OnClickListener(){
@@ -166,7 +166,7 @@ public class bank extends AppCompatActivity {
             return tempString;
         }
         else{
-            Toast.makeText(bank.this, "Error in parameter pass", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(bank.this, "Error in parameter pass", Toast.LENGTH_SHORT).show();
             return "error";
         }
     }
@@ -179,7 +179,7 @@ public class bank extends AppCompatActivity {
             Toast.makeText(bank.this, "Username saved mate", Toast.LENGTH_LONG).show();
         }catch(Exception e){
             e.printStackTrace();
-            Toast.makeText(bank.this, "Error saving score!", Toast.LENGTH_LONG).show();
+//            Toast.makeText(bank.this, "Error saving score!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -196,7 +196,7 @@ public class bank extends AppCompatActivity {
             scoreDinoLok = new String(buffer);
         }catch(Exception e){
             e.printStackTrace();
-            Toast.makeText(bank.this, "Error reading file", Toast.LENGTH_LONG).show();
+//            Toast.makeText(bank.this, "Error reading file", Toast.LENGTH_LONG).show();
         }
 //        Toast.makeText(MainActivity.this, scoreDinoLok, Toast.LENGTH_LONG).show();
         return scoreDinoLok;
